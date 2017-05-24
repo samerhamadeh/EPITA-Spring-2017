@@ -7,3 +7,21 @@
 //
 
 import Foundation
+
+
+class JsonParser {
+    
+    func jsonParser(cities: Data?){
+
+        do {
+            if let data = cities,
+            let json = try JSONSerialization.jsonObject(with: data) as? [String: Any],
+            let cityName = json["name"] as? String{
+                print(cityName)
+            }
+        } catch {
+            print("Error parsing JSON: \(error)")
+        }
+    }
+}
+

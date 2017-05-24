@@ -9,9 +9,17 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-
+    
+    var weatherArray = [Weather]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        weatherArray.append(Weather(city: "Paris", temperature: 30, picture: nil)!)
+        weatherArray.append(Weather(city: "Berlin", temperature: 25, picture: nil)!)
+        weatherArray.append(Weather(city: "Madrid", temperature: 31, picture: nil)!)
+        weatherArray.append(Weather(city: "London", temperature: 15, picture: nil)!)
+
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -22,6 +30,7 @@ class TableViewController: UITableViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
         // Dispose of any resources that can be recreated.
     }
 
@@ -29,23 +38,28 @@ class TableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return weatherArray.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "weatherTableViewCell", for: indexPath) as? TableViewCell else {
+            fatalError("error")
+        }
 
-        // Configure the cell...
+        cell.city_name.text = weatherArray[indexPath.row].city
+        cell.city_temp.text = String(weatherArray[indexPath.row].temperature)
+//        cell.textLabel?.text = weatherArray[indexPath.row].city
+//        cell.detailTextLabel?.text = String(weatherArray[indexPath.row].temperature)
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var city_name: UILabel!
+    @IBOutlet weak var city_temp: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +18,19 @@ class ViewController: UIViewController {
         
         let weather = WeatherFetch()
         weather.getWeather(city: "Paris")
+        
+        let weather_stat = Weather(city: "Paris", temperature: 30, picture: nil)
+        
+        //exlamation is to unwrap safely the value
+        print(weather_stat!.city)
+        print(weather_stat!.temperature)
+        
+        city_name.text = weather_stat!.city
+        city_temp.text = String(weather_stat!.temperature)
+        
+//        let jsonParser = JsonParser()
+//        jsonParser.jsonParser(cities: data!)
+
     }
 
     override func didReceiveMemoryWarning() {
