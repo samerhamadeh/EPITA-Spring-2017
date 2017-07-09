@@ -15,6 +15,8 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.backgroundColor = UIColor.lightGray
+        
         weatherArray.append(Weather(city: "Paris", temperature: 30, picture: UIImage(named: "paris_background"))!)
         weatherArray.append(Weather(city: "Berlin", temperature: 25, picture: UIImage(named: "berlin_background"))!)
         weatherArray.append(Weather(city: "Madrid", temperature: 31, picture: UIImage(named: "madrid_background"))!)
@@ -51,6 +53,8 @@ class TableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "weatherTableViewCell", for: indexPath) as? TableViewCell else {
             fatalError("error")
         }
+        
+        cell.backgroundColor = UIColor.lightGray
 
         cell.city_name.text = weatherArray[indexPath.row].city
         cell.city_temp.text = String(weatherArray[indexPath.row].temperature)
