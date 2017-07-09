@@ -14,8 +14,6 @@ class DetailsViewController: UIViewController {
     var getcity_temp = Int()
     var getcity_image = UIImage()
     
-    
-    
     @IBOutlet weak var city_image: UIImageView!
     @IBOutlet weak var city_name: UILabel!
     @IBOutlet weak var city_temp: UILabel!
