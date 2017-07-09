@@ -15,10 +15,10 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        weatherArray.append(Weather(city: "Paris", temperature: 30, picture: nil)!)
-        weatherArray.append(Weather(city: "Berlin", temperature: 25, picture: nil)!)
-        weatherArray.append(Weather(city: "Madrid", temperature: 31, picture: nil)!)
-        weatherArray.append(Weather(city: "London", temperature: 15, picture: nil)!)
+        weatherArray.append(Weather(city: "Paris", temperature: 30, picture: UIImage(named: "paris_background"))!)
+        weatherArray.append(Weather(city: "Berlin", temperature: 25, picture: UIImage(named: "berlin_background"))!)
+        weatherArray.append(Weather(city: "Madrid", temperature: 31, picture: UIImage(named: "madrid_background"))!)
+        weatherArray.append(Weather(city: "London", temperature: 15, picture: UIImage(named: "london_background"))!)
 
 
         // Uncomment the following line to preserve selection between presentations
@@ -54,12 +54,23 @@ class TableViewController: UITableViewController {
 
         cell.city_name.text = weatherArray[indexPath.row].city
         cell.city_temp.text = String(weatherArray[indexPath.row].temperature)
+        cell.city_image.image = weatherArray[indexPath.row].picture
 //        cell.textLabel?.text = weatherArray[indexPath.row].city
 //        cell.detailTextLabel?.text = String(weatherArray[indexPath.row].temperature)
 
         return cell
     }
-    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let destination = storyboard.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
+        
+        destination.getcity_name = weatherArray[indexPath.row].city
+        destination.getcity_temp = weatherArray[indexPath.row].temperature
+        destination.getcity_image = weatherArray[indexPath.row].picture!
+        
+        self.navigationController?.pushViewController(destination, animated: true)
+        //navigationController?.pushViewController(destination, animated: true)
+    }
     @IBAction func unwindToWeatherList(sender: UIStoryboardSegue){
         if let sourceViewController = sender.source as? AddViewController, let weather = sourceViewController.weather {
             let newIndexPath = IndexPath(row: weatherArray.count, section: 0)

@@ -14,6 +14,12 @@
 		3C0B8CCC1EA7FD9700F93394 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C0B8CCA1EA7FD9700F93394 /* LaunchScreen.storyboard */; };
 		3C0B8CD71EA7FD9700F93394 /* Advanced_iOS_Spring_2017Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0B8CD61EA7FD9700F93394 /* Advanced_iOS_Spring_2017Tests.swift */; };
 		3C30FDBF1EB2825700225C75 /* WeatherFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C30FDBE1EB2825700225C75 /* WeatherFetch.swift */; };
+		6817E8BF1EE07CB600520533 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6817E8BE1EE07CB600520533 /* DetailsViewController.swift */; };
+		6817E8C11EE0884700520533 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6817E8C01EE0884700520533 /* AddViewController.swift */; };
+		68305EFA1ED5F0DF0068C1BC /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68305EF91ED5F0DF0068C1BC /* TableViewCell.swift */; };
+		6850B28D1ECCB5C6007C18C1 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6850B28C1ECCB5C6007C18C1 /* Weather.swift */; };
+		6850B2921ECCC3B5007C18C1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6850B2911ECCC3B5007C18C1 /* TableViewController.swift */; };
+		68AAC4A81EC3820000599833 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AAC4A71EC3820000599833 /* JsonParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +44,12 @@
 		3C0B8CD61EA7FD9700F93394 /* Advanced_iOS_Spring_2017Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advanced_iOS_Spring_2017Tests.swift; sourceTree = "<group>"; };
 		3C0B8CD81EA7FD9700F93394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C30FDBE1EB2825700225C75 /* WeatherFetch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherFetch.swift; sourceTree = "<group>"; };
+		6817E8BE1EE07CB600520533 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		6817E8C01EE0884700520533 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		68305EF91ED5F0DF0068C1BC /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		6850B28C1ECCB5C6007C18C1 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		6850B2911ECCC3B5007C18C1 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		68AAC4A71EC3820000599833 /* JsonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +98,12 @@
 				3C0B8CC81EA7FD9700F93394 /* Assets.xcassets */,
 				3C0B8CCA1EA7FD9700F93394 /* LaunchScreen.storyboard */,
 				3C0B8CCD1EA7FD9700F93394 /* Info.plist */,
+				68AAC4A71EC3820000599833 /* JsonParser.swift */,
+				6850B28C1ECCB5C6007C18C1 /* Weather.swift */,
+				6850B2911ECCC3B5007C18C1 /* TableViewController.swift */,
+				68305EF91ED5F0DF0068C1BC /* TableViewCell.swift */,
+				6817E8BE1EE07CB600520533 /* DetailsViewController.swift */,
+				6817E8C01EE0884700520533 /* AddViewController.swift */,
 			);
 			path = "Advanced iOS Spring 2017";
 			sourceTree = "<group>";
@@ -203,8 +221,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C0B8CC41EA7FD9700F93394 /* ViewController.swift in Sources */,
+				6850B2921ECCC3B5007C18C1 /* TableViewController.swift in Sources */,
+				6817E8C11EE0884700520533 /* AddViewController.swift in Sources */,
 				3C0B8CC21EA7FD9700F93394 /* AppDelegate.swift in Sources */,
+				6817E8BF1EE07CB600520533 /* DetailsViewController.swift in Sources */,
+				68AAC4A81EC3820000599833 /* JsonParser.swift in Sources */,
 				3C30FDBF1EB2825700225C75 /* WeatherFetch.swift in Sources */,
+				68305EFA1ED5F0DF0068C1BC /* TableViewCell.swift in Sources */,
+				6850B28D1ECCB5C6007C18C1 /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

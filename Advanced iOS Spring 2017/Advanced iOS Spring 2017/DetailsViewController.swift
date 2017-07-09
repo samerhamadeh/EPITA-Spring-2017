@@ -10,6 +10,12 @@ import UIKit
 
 class DetailsViewController: UIViewController {
     
+    var getcity_name = String()
+    var getcity_temp = Int()
+    var getcity_image = UIImage()
+    
+    
+    
     @IBOutlet weak var city_image: UIImageView!
     @IBOutlet weak var city_name: UILabel!
     @IBOutlet weak var city_temp: UILabel!
@@ -19,6 +25,11 @@ class DetailsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        city_image.image = getcity_image
+        city_name.text = getcity_name
+        city_temp.text = String(getcity_temp)
+        
     }
 
     override func didReceiveMemoryWarning() {

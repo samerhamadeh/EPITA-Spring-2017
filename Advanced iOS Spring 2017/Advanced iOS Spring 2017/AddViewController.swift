@@ -45,7 +45,11 @@ class AddViewController: UIViewController {
         let city = city_name.text
         let temp = city_temp.text
         
-        weather = Weather(city: city!, temperature: Int(temp!)!, picture: nil)
+            
+        let image = UIImage(named: "image\(arc4random_uniform(3) + 1).png")
+        
+        
+        weather = Weather(city: city!, temperature: Int(temp!)!, picture: image)
         
     }
 
